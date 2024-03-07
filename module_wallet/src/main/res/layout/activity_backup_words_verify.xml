@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.BackupWordsVerifyActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="17dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:text="@string/tip_verify_mnemonic_b"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvVerifyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <include
+            layout="@layout/default_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="224dp" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvConfirm"
+            style="@style/submitButton.blue.disable"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="116dp"
+            android:enabled="false"
+            android:text="@string/done" />
+
+    </LinearLayout>
+</LinearLayout>

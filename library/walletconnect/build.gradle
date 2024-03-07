@@ -1,0 +1,12 @@
+apply from: "../library.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation(rootProject.ext.dependencies["appcompat_v7"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.squareup.moshi:moshi:1.8.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+    implementation "org.bouncycastle:bcprov-jdk15on:1.64"
+    implementation "com.github.komputing:khex:1.0.0-RC6"
+}

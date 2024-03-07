@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/default_titlbar"
+        tools:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_common_back_black" />
+
+        <View
+            android:id="@+id/dot"
+            style="@style/viewPlaceHolder"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="28dp" />
+
+        <View
+            android:id="@+id/redDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_above="@+id/tvNoticeTrade"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_toEndOf="@+id/tvNoticeTrade"
+            android:background="@drawable/shape_notice_dot"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/redDotSys"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_above="@+id/tvNoticeMessage"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_toEndOf="@+id/tvNoticeMessage"
+            android:background="@drawable/shape_notice_dot"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvNoticeTrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/dot"
+            android:drawablePadding="8dp"
+            android:singleLine="true"
+            android:text="@string/title_trade_notice"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            app:rv_bottomDrawable="@drawable/shape_notice_indicator"
+            app:rv_bottomSelectedDrawable="@drawable/shape_notice_indicator_sel"
+            app:rv_selected="true"
+            app:rv_textSelectedColor="@color/text_color_dark_normal" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvNoticeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/dot"
+            android:drawablePadding="8dp"
+            android:singleLine="true"
+            android:text="@string/title_system_notice"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            app:rv_bottomDrawable="@drawable/shape_notice_indicator"
+            app:rv_bottomSelectedDrawable="@drawable/shape_notice_indicator_sel"
+            app:rv_selected="false"
+            app:rv_textSelectedColor="@color/text_color_dark_normal" />
+
+        <ImageView
+            android:id="@+id/ivReset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingHorizontal="10dp"
+            tools:src="@drawable/ic_mine_notice_reset" />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/default_rv_refresh_loadmore" />
+
+</LinearLayout>

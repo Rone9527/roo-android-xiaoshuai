@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.WalletImportActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="15dp"
+            android:gravity="center"
+            android:text="@string/input_pk_phrase_tip"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <com.aries.ui.view.radius.RadiusEditText
+            android:id="@+id/etImportWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="@string/hint_input_pk_phrase"
+            android:minHeight="140dp"
+            android:padding="@dimen/dimen_15"
+            android:textColor="#FF666666"
+            android:textColorHint="@color/color_editor"
+            android:digits="@string/filter_letter_number"
+            android:textSize="16sp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp" />
+
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvImportWallet"
+            style="@style/submitButton.blue.disable"
+            android:layout_marginHorizontal="20dp"
+            android:enabled="false"
+            android:layout_marginTop="130dp"
+            android:text="确定导入" />
+    </LinearLayout>
+</LinearLayout>

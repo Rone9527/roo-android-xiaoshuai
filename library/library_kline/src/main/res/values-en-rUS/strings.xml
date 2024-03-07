@@ -1,0 +1,14 @@
+<resources>
+
+    <string-array name="kline_select_show">
+        <item>Date</item>
+        <item>O</item>
+        <item>H</item>
+        <item>L</item>
+        <item>C</item>
+        <item>24h Change</item>
+        <item>Rise Fall</item>
+        <item>Vol</item>
+    </string-array>
+
+</resources>

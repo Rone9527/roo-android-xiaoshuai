@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingStart="10dp">
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="13dp"
+        app:rv_selected="true"
+        app:rv_textSelectedColor="@color/blue_color"
+        tools:text="@string/borrow" />
+
+</LinearLayout>

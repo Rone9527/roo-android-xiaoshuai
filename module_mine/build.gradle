@@ -1,0 +1,36 @@
+apply from: "../componet.gradle"
+
+android {
+    defaultConfig {
+        if (project.ext.runAsApp) {
+            applicationId 'com.roido.mine'
+        }
+        multiDexEnabled true
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation 'com.zendesk:support:3.0.2'
+    implementation 'com.zendesk:chat:2.2.0'
+    implementation 'com.zendesk:messaging:4.3.1'
+
+    implementation 'cn.jiguang.sdk:jpush:4.2.4'
+
+    implementation project(':library:library_view')
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation project(':library:library_webview')
+    implementation project(':library:library_lock')
+    implementation project(':library:library_tablayout')
+
+    implementation rootProject.ext.dependencies["BRVAH"]
+    implementation rootProject.ext.dependencies["SmartRefresh"]
+    implementation rootProject.ext.dependencies["easyphotos"]
+
+    //以太坊主链：web3j
+    implementation 'org.web3j:core:4.6.0-android'
+}

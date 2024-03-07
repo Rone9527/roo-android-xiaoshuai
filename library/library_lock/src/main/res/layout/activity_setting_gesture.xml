@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GestureLockActivity">
+
+    <include layout="@layout/default_titlbar_trans" />
+
+    <com.wangnan.library.GestureLockView
+        android:id="@+id/gesture_lock_view"
+        android:layout_width="274dp"
+        android:layout_height="274dp"
+        android:layout_below="@+id/titleBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
+        android:background="@color/transparent"
+        app:error_color="#FFFF4949"
+        app:line_thickness="2dp"
+        app:normal_color="@color/white_color_assist_2"
+        app:press_color="@color/blue_color" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+apply from: "../componet.gradle"
+
+android {
+    defaultConfig {
+        if (project.ext.runAsApp) {
+            applicationId 'com.roo.webview'
+        }
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation project(':library:library_view')
+    implementation project(':library:library_webview')
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["easyphotos"]
+    implementation 'org.web3j:core:4.6.0-android'
+
+}

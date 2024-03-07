@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tvBackupWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:textSize="16sp"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_backgroundSelectedColor="@color/blue_color"
+        app:rv_radius="6dp"
+        app:rv_selected="false"
+        app:rv_textColor="@color/text_color_dark_normal"
+        app:rv_textSelectedColor="@color/white"
+        tools:text="Celia" />
+
+</LinearLayout>

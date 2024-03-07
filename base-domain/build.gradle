@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao' // 添加应用依赖插件
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        disable 'CheckResult', 'GoogleAppIndexingWarning', 'screenOrientation'
+    }
+    greendao {
+        schemaVersion 15 //数据库当前版本号
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies["junit"]
+    implementation rootProject.ext.dependencies["BRVAH"]
+    implementation rootProject.ext.dependencies["fastjson"]
+    implementation rootProject.ext.dependencies["appcompat_v7"]
+    implementation 'org.greenrobot:greendao:3.2.2'
+    //https://github.com/trustwallet/wallet-core
+    implementation "com.trustwallet:wallet-core:2.6.3"
+
+    api 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+    api 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+
+}

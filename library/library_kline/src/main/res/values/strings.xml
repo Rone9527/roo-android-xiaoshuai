@@ -1,0 +1,14 @@
+<resources>
+
+    <string-array name="kline_select_show">
+        <item>日期</item>
+        <item>开</item>
+        <item>高</item>
+        <item>低</item>
+        <item>收</item>
+        <item>涨跌幅</item>
+        <item>涨跌额</item>
+        <item>成交量</item>
+    </string-array>
+
+</resources>

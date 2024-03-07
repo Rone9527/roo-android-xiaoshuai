@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--1、name对应的属性值，开发者可以自由定义；2、path对应的属性值，当前external-path标签下的相对路径-->
+
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/DCIM/camerademo目录-->
+    <external-path
+        name="roo_DCIM"
+        path="DCIM/roo" />
+
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/Pictures/xuetu目录-->
+    <external-path
+        name="roo_Pictures"
+        path="Pictures/roo" />
+
+    <!--代表app 私有的存储区域 Context.getFilesDir()目录下的images目录 /data/user/0/packagename/files/images-->
+    <files-path
+        name="roo_private_files"
+        path="images" />
+
+    <!--代表app 私有的存储区域 Context.getCacheDir()目录下的images目录 /data/user/0/packagename/cache/images-->
+    <cache-path
+        name="roo_private_cache"
+        path="images" />
+
+    <!--代表app 外部存储区域根目录下的文件 Context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)目录下的Pictures目录-->
+    <external-files-path
+        name="roo_external_files"
+        path="Pictures" />
+    <!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的images目录-->
+    <root-path
+        name="roo_external_cache"
+        path="" />
+
+    <external-path
+        name="app_update_external"
+        path="/" />
+    <external-cache-path
+        name="app_update_cache"
+        path="/" />
+</paths>

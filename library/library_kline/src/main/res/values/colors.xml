@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="chart_red">#FF4D4D</color>
+    <color name="chart_green">#54C083</color>
+
+    <color name="chart_line">#993584ff</color>
+    <color name="chart_line_background">#1a3584ff</color>
+
+    <color name="chart_ma5">#F6DC93</color>
+    <color name="chart_ma10">#61D1C0</color>
+    <color name="chart_ma30">#CB92FE</color>
+    <color name="chart_ma50">#FFC76D</color>
+    <color name="chart_white">#ffffff</color>
+
+    <color name="chart_background">#172026</color>
+    <color name="chart_bac">#172026</color>
+    <color name="chart_point_bac">#202326</color>
+    <color name="chart_grid_line">#1AFFFFFF</color>
+    <color name="chart_text">#818596</color>
+    <color name="chart_selector">#cc121A1D</color>
+    <color name="chart_tab_background">#30343C</color>
+    <color name="chart_tab_indicator">#FF6601</color>
+
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_dark"
+    android:orientation="vertical"
+    tools:context="com.roo.home.mvp.ui.activity.WalletManagerActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="7dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutWalletName"
+        android:layout_width="match_parent"
+        android:background="@color/background_color"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_change_w_name"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <TextView
+            android:id="@+id/tvWalletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            tools:text="Roo Wallet" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutBackup"
+        android:layout_width="match_parent"
+        android:background="@color/background_color"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_back_up_mnemonics"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutExport"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_export_pk"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+    </LinearLayout>
+
+    <View
+        style="@style/viewSpace"
+        android:layout_height="25dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutRemove"
+        android:layout_width="match_parent"
+        android:background="@color/background_color"
+        android:layout_height="55dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/delete_wallet"
+            android:textColor="@color/red_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

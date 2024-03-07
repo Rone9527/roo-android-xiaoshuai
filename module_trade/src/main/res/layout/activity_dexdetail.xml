@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_dark"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.DexDetailActivity">
+
+    <include layout="@layout/default_titlbar_trans" />
+
+    <ImageView
+        android:id="@+id/ivShadow"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        tools:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/tvTransferStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#FF108EFF"
+        android:textSize="16sp"
+        tools:text="@string/dex_success" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivCoinFrom"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvCoinNameFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivCoinFrom"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="BTC" />
+
+            <TextView
+                android:id="@+id/tvLinkNameFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCoinNameFrom"
+                android:layout_alignStart="@+id/tvCoinNameFrom"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="14sp"
+                tools:text="BTC" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_dex_side" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivCoinTo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvCoinNameTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivCoinTo"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="BTC" />
+
+            <TextView
+                android:id="@+id/tvLinkNameTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCoinNameTo"
+                android:layout_alignStart="@+id/tvCoinNameTo"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="14sp"
+                tools:text="BTC" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.aries.ui.view.radius.RadiusRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <TextView
+            android:id="@+id/tvTransferOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="29dp"
+            android:text="@string/transfer_out"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTransferOutCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_toStartOf="@+id/tvTransferOutCountLink"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="20sp"
+            tools:text="- 0.384733 BTC" />
+
+        <TextView
+            android:id="@+id/tvTransferOutCountLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="27dp"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            tools:text="(USDT)" />
+
+        <View
+            style="@style/viewDivider"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvTransferIn"
+            android:layout_marginTop="14dp" />
+
+        <TextView
+            android:id="@+id/tvTransferIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTransferOut"
+            android:layout_marginTop="33dp"
+            android:text="@string/receive"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvReceiveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTransferOutCount"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_toStartOf="@+id/tvReceiveCountLink"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="20sp"
+            tools:text="+ 0.432343 HT" />
+
+        <TextView
+            android:id="@+id/tvReceiveCountLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTransferOutCount"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="27dp"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            tools:text="(USDT)" />
+
+        <TextView
+            android:id="@+id/tvFeeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTransferIn"
+            android:layout_marginTop="33dp"
+            android:text="@string/fee"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvFeeText"
+            android:layout_alignParentEnd="true"
+            android:maxWidth="220dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="500 USDT" />
+
+        <TextView
+            android:id="@+id/tvReceiverText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFeeText"
+            android:layout_marginTop="33dp"
+            android:text="@string/exchange_platform"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvReceiverText"
+            android:layout_alignParentEnd="true"
+            android:maxWidth="220dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="Uniswap" />
+
+        <View
+            style="@style/viewDivider"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvReceiver"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvCreateTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvReceiverText"
+            android:layout_marginTop="33dp"
+            android:text="@string/order_create_date"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvCreateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvCreateTimeText"
+            android:layout_alignParentEnd="true"
+            android:maxWidth="220dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="04-03 12：01：55" />
+
+        <TextView
+            android:id="@+id/tvOrderIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCreateTimeText"
+            android:layout_marginTop="33dp"
+            android:text="@string/order_number"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvOrderIdText"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/ic_common_copy"
+            android:drawablePadding="8dp"
+            android:maxWidth="220dp"
+            android:text="02302120...dswe232"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp" />
+
+    </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+
+</LinearLayout>

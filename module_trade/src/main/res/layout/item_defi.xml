@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="11dp"
+        android:visibility="gone"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvCouple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="13sp"
+        tools:text="ETH-QNT" />
+
+    <TextView
+        android:id="@+id/tvProportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCouple"
+        android:layout_marginEnd="21dp"
+        android:layout_toStartOf="@+id/cbPercent"
+        android:gravity="end"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="13sp"
+        tools:text="1:26.905140" />
+
+    <TextView
+        android:id="@+id/tvPriceUSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvProvider"
+        android:layout_alignTop="@+id/tvTVL"
+        android:layout_marginEnd="21dp"
+        android:layout_toStartOf="@+id/cbPercent"
+        android:gravity="end"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="12sp"
+        tools:text="≈$ 73.98" />
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tvProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCouple"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="5dp"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="12sp"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="3dp"
+        tools:text="Uniswap" />
+
+    <TextView
+        android:id="@+id/tvTVL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCouple"
+        android:layout_alignBaseline="@+id/tvProvider"
+        android:layout_alignTop="@+id/tvProvider"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/tvProvider"
+        android:gravity="center_vertical"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="12sp"
+        tools:text="TVL:$1332693" />
+
+    <com.roo.trade.mvp.ui.widget.AutoFitTextView
+        android:id="@+id/cbPercent"
+        android:layout_width="68dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingVertical="6dp"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+</RelativeLayout>

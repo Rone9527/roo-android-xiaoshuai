@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.roo.wallet.mvp.ui.activity.GuiderActivity">
+
+    <FrameLayout
+        android:id="@+id/layoutJump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="50dp"
+        android:padding="@dimen/padding_small">
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="65dp"
+            android:paddingTop="@dimen/dimen_6"
+            android:paddingBottom="@dimen/dimen_6"
+            android:text="跳过"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:rv_backgroundColor="@color/transparent_33"
+            app:rv_radiusHalfHeightEnable="true" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/vPlaceHolder"
+        style="@style/viewPlaceHolder"
+        android:layout_height="110dp"
+        android:visibility="gone" />
+
+    <com.roo.core.ui.widget.ExViewPager
+        android:id="@+id/view_pager"
+        style="@style/ViewNoFade"
+        android:layout_below="@+id/vPlaceHolder" />
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magicIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp" />
+
+</RelativeLayout>

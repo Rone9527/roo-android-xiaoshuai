@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:id="@+id/layoutRoot"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/ivDapp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvDappName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_toEndOf="@+id/ivDapp"
+        android:ellipsize="middle"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        android:text="Uniswap" />
+
+    <TextView
+        android:id="@+id/tvDappInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_below="@+id/tvDappName"
+        android:layout_alignStart="@+id/tvDappName"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp"
+        android:text="----" />
+
+</RelativeLayout>

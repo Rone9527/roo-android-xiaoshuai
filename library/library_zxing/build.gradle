@@ -1,0 +1,10 @@
+apply from: "../library.gradle"
+
+dependencies {
+    implementation(rootProject.ext.dependencies["support_v4"])
+
+//    api('com.journeyapps:zxing-android-embedded:3.6.0') {
+//        exclude group: 'com.android.support', module: 'support-v4'
+//    }
+    implementation 'com.google.zxing:core:3.4.0'
+}

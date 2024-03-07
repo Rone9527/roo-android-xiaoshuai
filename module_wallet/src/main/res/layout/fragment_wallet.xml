@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context="com.roo.home.mvp.ui.fragment.WalletFragment">
+
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_wallet_head"
+        android:orientation="vertical">
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvWalletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="6dp"
+            android:drawablePadding="8dp"
+            android:ellipsize="middle"
+            android:maxWidth="260dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:rv_rightDrawable="@drawable/ic_home_select_wallet"
+            tools:text="RooWallet_7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="28dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_wallet_transfer"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/transfer"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvCashier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_wallet_cashier"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/receive_payment"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_wallet_scan"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/title_scan"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tvExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_wallet_dex"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/flash_exchange"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myAssests"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/ivVisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:src="@drawable/ic_home_asset_visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvBalanceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTitle"
+                android:layout_marginTop="6dp"
+                android:text="0.000000"
+                android:textColor="#FFFFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="******" />
+
+        </RelativeLayout>
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:id="@+id/stickyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            app:rv_backgroundColor="@color/background_color"
+            app:rv_topLeftRadius="22dp"
+            app:rv_topRightRadius="22dp">
+
+            <TextView
+                android:id="@+id/tvSelectAsset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/all_assets"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ivSelectAsset"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingHorizontal="8dp"
+                android:src="@drawable/ic_home_select_asset" />
+
+            <View style="@style/viewPlaceHolder" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/ivAdd"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_home_add_asset" />
+
+                    <com.aries.ui.view.radius.RadiusLinearLayout
+                        android:id="@+id/llRed"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="@color/red_color"
+                        app:rv_radius="15dp" />
+                </FrameLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvAddAsset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_home_add_asset"
+                android:drawablePadding="8dp"
+                android:text="@string/add_token"
+                android:textColor="#FF666666"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            style="@style/ViewNoFade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.aries.ui.view.radius.RadiusFrameLayout
+        android:id="@+id/layoutBackupTip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/white"
+        app:rv_radius="8dp"
+        tools:visibility="visible">
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="11dp"
+            app:rv_backgroundColor="@color/background_color_dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_wallet_hint"
+                android:drawablePadding="10dp"
+                android:text="@string/tip_backup"
+                android:textColor="@color/color_deep_orange"
+                android:textSize="15sp" />
+
+            <View style="@style/viewPlaceHolder" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_next" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+    </com.aries.ui.view.radius.RadiusFrameLayout>
+</RelativeLayout>

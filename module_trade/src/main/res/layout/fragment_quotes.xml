@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.roo.trade.mvp.ui.fragment.QuotesFragment"
+    tools:ignore="MissingDefaultResource">
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="7dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="15dp"
+        app:rv_topRightRadius="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="125"
+            android:text="@string/market_value"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutPriceChange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="120"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/t_price"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/ivPrice"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_quote_change_common" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutQuoteChange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="95"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/quote_change"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/ivQuote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_quote_change_common" />
+        </LinearLayout>
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:background="@color/background_color"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            style="@style/ViewNoFade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:paddingBottom="7dp" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

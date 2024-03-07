@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aries.ui.view.radius.RadiusRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp"
+    app:rv_backgroundColor="@color/white"
+    app:rv_radius="8dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/layoutIcon"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCoin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@mipmap/ic_launcher" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/layoutIcon"
+        android:ellipsize="middle"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="16sp"
+        tools:text="123651" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutIcon"
+        android:layout_marginTop="12dp"
+        android:ellipsize="middle"
+        android:maxWidth="300dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        tools:text="hhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gt" />
+
+    <TextView
+        android:id="@+id/tvBookDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddress"
+        android:layout_alignStart="@+id/tvAddress"
+        android:layout_marginTop="8dp"
+        android:ellipsize="middle"
+        android:maxWidth="300dp"
+        android:singleLine="true"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp"
+        tools:text="hhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gt" />
+
+</com.aries.ui.view.radius.RadiusRelativeLayout>

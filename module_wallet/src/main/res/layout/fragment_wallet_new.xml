@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 第一部分:CoordinatorLayout -->
+
+
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_color">
+
+        <com.aries.ui.view.radius.RadiusTextView
+
+            android:id="@+id/tvWalletName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="6dp"
+            android:drawablePadding="8dp"
+            android:ellipsize="middle"
+            android:maxWidth="260dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:rv_rightDrawable="@drawable/ic_home_select_wallet"
+            tools:text="RooWallet_7" />
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_color"
+            app:srlAccentColor="@android:color/white"
+            app:srlPrimaryColor="@color/blue_color"
+            app:srlTextSizeTitle="16sp"
+            app:srlTextSizeTime="10dp"
+            app:srlTextTimeMarginTop="2dp"
+            app:srlEnableLastTime="true"
+            app:srlFinishDuration="500"
+            app:srlDrawableSize="20dp"
+            app:srlDrawableArrowSize="20dp"
+            app:srlDrawableProgressSize="20dp"
+            app:srlDrawableMarginRight="20dp"
+            app:srlClassicsSpinnerStyle="Translate"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         >
+            <!-- 第二部分:缩放控件-->
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <include layout="@layout/wallet_head" />
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_color">
+
+                    <com.aries.ui.view.radius.RadiusLinearLayout
+
+                        android:id="@+id/stickyLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="15dp"
+                        app:rv_topLeftRadius="22dp"
+                        app:rv_topRightRadius="22dp">
+
+                        <TextView
+                            android:id="@+id/tvSelectAsset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="@string/all_assets"
+                            android:textColor="@color/text_color_dark_normal"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/ivSelectAsset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="8dp"
+                            android:src="@drawable/ic_home_select_asset" />
+
+                        <View style="@style/viewPlaceHolder" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlAdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true">
+
+                                <ImageView
+                                    android:id="@+id/ivAdd"
+                                    android:layout_width="19dp"
+                                    android:layout_height="19dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_home_add_asset" />
+
+                                <com.aries.ui.view.radius.RadiusLinearLayout
+                                    android:id="@+id/llRed"
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    app:rv_backgroundColor="@color/red_color"
+                                    app:rv_radius="15dp" />
+                            </FrameLayout>
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvAddAsset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_home_add_asset"
+                            android:drawablePadding="8dp"
+                            android:text="@string/add_token"
+                            android:textColor="#FF666666"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                    </com.aries.ui.view.radius.RadiusLinearLayout>
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <!-- 第三部分:Your Scroll View-->
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.aries.ui.view.radius.RadiusFrameLayout
+        android:visibility="gone"
+        android:id="@+id/layoutBackupTip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:rv_backgroundColor="@color/white"
+        app:rv_radius="8dp"
+       >
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="15dp"
+            app:rv_backgroundColor="@color/background_color_dark">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_home_safety_questionnaire"
+                android:drawablePadding="28dp"
+                android:text="安全问卷"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="15sp" />
+
+            <View style="@style/viewPlaceHolder" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_next" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+    </com.aries.ui.view.radius.RadiusFrameLayout>
+</LinearLayout>

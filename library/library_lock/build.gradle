@@ -1,0 +1,9 @@
+apply from: "../library.gradle"
+
+dependencies {
+    implementation rootProject.ext.dependencies["appcompat_v7"]
+    implementation project(':library:library_router')
+    implementation project(':core-framework')
+    api rootProject.ext.dependencies["gesturelockview"]
+
+}

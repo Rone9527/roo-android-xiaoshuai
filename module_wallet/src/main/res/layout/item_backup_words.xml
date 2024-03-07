@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aries.ui.view.radius.RadiusLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBackupWords"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:orientation="vertical"
+    android:paddingTop="17dp"
+    android:paddingBottom="2dp"
+    app:rv_backgroundColor="@color/background_color_dark">
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tvBackupWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Celia"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="7"
+        android:textColor="@color/white_color_assist_1"
+        android:textSize="13sp" />
+
+</com.aries.ui.view.radius.RadiusLinearLayout>

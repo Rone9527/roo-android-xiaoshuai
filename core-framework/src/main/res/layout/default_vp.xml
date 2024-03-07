@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.roo.core.ui.widget.ExViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_pager"
+    style="@style/ViewNoFade" />

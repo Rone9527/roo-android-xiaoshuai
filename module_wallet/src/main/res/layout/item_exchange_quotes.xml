@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingEnd="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:src="@drawable/ic_common_error_pic_circle" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ivLogo"
+                android:gravity="end"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="14sp"
+                tools:text="----" />
+
+            <TextView
+                android:id="@+id/tvCouple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_alignStart="@+id/tvName"
+                android:gravity="end"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="12sp"
+                tools:text="ETH/USDT" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/tvAmount"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="135dp"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="1" />
+    </RelativeLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp" />
+</LinearLayout>

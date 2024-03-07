@@ -1,0 +1,167 @@
+ext.mainApp = true
+
+apply from: "../componet.gradle"
+//apply plugin: 'org.greenrobot.greendao' // 添加应用依赖插件
+
+static def releaseTime() {
+    return new Date().format("MM-dd-HH-mm")
+}
+
+android {
+
+    packagingOptions {
+        //Android打包App Bundle时报错解决
+        exclude 'lib/x86_64/darwin/libscrypt.dylib'
+        exclude 'lib/x86_64/freebsd/libscrypt.so'
+        exclude 'lib/x86_64/linux/libscrypt.so'
+    }
+    defaultConfig {
+        applicationId 'com.roo.wallet'
+
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+//        ndk {
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+//        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.roo.wallet",
+                JPUSH_APPKEY : "2e9d8ec86d7e2a2502f98182",
+                JPUSH_CHANNEL: "developer-default",
+        ]
+
+        buildConfigField "String", "chainId", "\"01\""//主网
+        buildConfigField "String", "HTchainId", "\"128\""//主网
+        buildConfigField "String", "BNBchainId", "\"56\""//主网
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            buildConfigField "String", "chainId", "\"01\""//主网
+            buildConfigField "String", "HTchainId", "\"128\""//主网
+            buildConfigField "String", "BNBchainId", "\"56\""//主网
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            buildConfigField "String", "chainId", "\"01\""//主网
+            buildConfigField "String", "HTchainId", "\"128\""//主网
+            buildConfigField "String", "BNBchainId", "\"56\""//主网
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'api'    //在apk文件后边生成版本号信息
+
+    /**
+     * 打包导出apk时候的名字，或者各种服务的key配置等等
+     */
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.productFlavors[0].name}_android_${variant.buildType.name}_v_${defaultConfig.versionName}_t_" + releaseTime() + ".apk"
+        }
+    }
+
+    productFlavors {
+        roo {
+            applicationId "com.roo.wallet"
+            resValue "string", "app_name", "Roo"
+            buildConfigField "String", "APP_File_Provider", '"com.roo.wallet.fileprovider"'
+            buildConfigField "int", "APP_Min_Sdk_Version", "21"
+            //manifest里面的值
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.roo.wallet.fileprovider"
+            ]
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview_v7"]
+    //implementation rootProject.ext.dependencies["constraint"]
+
+    implementation rootProject.ext.dependencies["retrofit_converter_gson"]
+    implementation rootProject.ext.dependencies["okhttp3_log_interceptor"]
+
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation rootProject.ext.dependencies["fastjson"]
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
+
+    implementation 'cn.jiguang.sdk:jpush:4.2.4'
+    implementation 'cn.jiguang.sdk:jcore:2.9.0'
+
+    implementation project(':library:library_kline')
+    implementation project(':library:library_seekbar')
+    implementation project(':library:library_tablayout')
+    implementation project(':library:library_splash')
+    implementation project(':library:library_view')
+    implementation project(':library:library_lock')
+    implementation project(':library:library_verify_button')
+    implementation project(':library:library_shine')
+    implementation project(':library:library_webview')
+
+
+    implementation rootProject.ext.dependencies["easyphotos"]
+    implementation rootProject.ext.dependencies["luban"]
+
+    implementation rootProject.ext.dependencies["SmartRefresh"]
+    implementation rootProject.ext.dependencies["BRVAH"]
+
+    implementation rootProject.ext.dependencies["multidex"]
+
+    implementation rootProject.ext.dependencies["ShortcutBadger"]
+
+    addComponent 'module_dapp'
+    addComponent 'module_mine'
+    addComponent 'module_trade'
+    addComponent 'module_wallet'
+
+    addComponent 'module_upgrade'
+    addComponent 'module_web'
+    addComponent 'module_qrcode'
+
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+
+    implementation 'com.cpiz.bubbleview:bubbleview:1.0.2'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.facebook.stetho:stetho-urlconnection:1.5.1'
+
+    implementation rootProject.ext.dependencies["lottie"]
+
+    //比特币主链
+    implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+    //以太坊主链：web3j
+    implementation 'org.web3j:core:4.6.0-android'
+    implementation "com.trustwallet:wallet-core:2.6.3"
+}

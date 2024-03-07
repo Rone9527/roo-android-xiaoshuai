@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layoutRoot"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="18dp"
+    android:paddingBottom="21dp"
+    android:paddingHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="middle"
+        android:maxWidth="260dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        tools:text="向Metaverse迁移！NFT硬核玩家NFT硬核玩家…" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignStart="@+id/tvTitle"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp"
+        tools:text="7月24-25日，2021世界区块链大会将在杭州未来科技城举行。有着中国“数字经济第一城”之称的杭州，将迎来一场令人期待…" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTitle"
+        android:textColor="@color/white_color_assist_2"
+        android:layout_alignParentEnd="true"
+        android:textSize="11sp"
+        tools:text="09/04/2020 14:32:52" />
+
+</RelativeLayout>

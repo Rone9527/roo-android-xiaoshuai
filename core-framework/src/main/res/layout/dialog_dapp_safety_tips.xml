@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1"
+    tools:context="com.roo.core.ui.dialog.DappTipDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace"
+        android:layout_above="@+id/content" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="17dp"
+            android:text="@string/visit_instructions"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="DApp名称："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                tools:text="QEfherdf"
+                android:textColor="#FF333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="简介："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                tools:text="念为加密资产行业带来一个高效能，自由交易的市场，同时通过挖矿生态使更多用户深入了解HECO生态的灵活高效，享受DeFi市场红利。"
+                android:textColor="#FF333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="网址："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7">
+
+                <TextView
+                    android:id="@+id/tv_links"
+                    android:drawablePadding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_copy_blue"
+                    android:text="https://twit...ogeSwapfans"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_email"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="邮箱："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7">
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:drawablePadding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_copy_blue"
+                    android:text="https://twit...ogeSwapfans"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_telegram"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Telegram："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7">
+
+                <TextView
+                    android:id="@+id/tv_telegram"
+                    android:drawablePadding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_copy_blue"
+                    android:text="https://twit...ogeSwapfans"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Twitter："
+                android:textColor="#FFA8B0BC"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7">
+
+                <TextView
+                    android:id="@+id/tv_twitter"
+                    android:drawablePadding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_copy_blue"
+                    android:text="https://twit...ogeSwapfans"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="48dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="23dp"
+            android:paddingTop="23dp"
+            android:paddingBottom="28dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风险提示"
+                android:textColor="#FF333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Roo walle上所展示的信息，均来自于第三方，仅供参考，项目具体情况需用户自行查证，Roo wallet 不承担任何保证责任。"
+                android:textColor="#FF333333"
+                android:textSize="14sp"
+
+                />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="25dp">
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvExit"
+                style="@style/submitButton.blue"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/exit"
+                android:textSize="16sp"
+                app:rv_backgroundColor="#FF5F69E8" />
+
+            <View
+                style="@style/viewSpace"
+                android:layout_width="25dp" />
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvConfirm"
+                style="@style/submitButton.blue"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sure"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

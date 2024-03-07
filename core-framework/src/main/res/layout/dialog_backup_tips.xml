@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1">
+
+
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="44dp"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_radius="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/safety_warning"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:minHeight="45dp">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="left"
+                android:text="@string/safety_warning_des"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tv_backup"
+            style="@style/submitButton.blue.disable"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="34dp"
+            android:text="@string/back_up_now"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="@string/cancel"
+            android:textSize="16sp"
+            android:textColor="#FFA8B0BC"
+            android:gravity="center"
+          />
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/white_color_assist_1"
+    tools:context="com.roo.core.ui.dialog.TransferConfirmDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace"
+        android:layout_above="@+id/content" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="20dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="矿工费设置"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingVertical="6dp"
+                android:src="@drawable/ic_common_back_black" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gas_fee"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <View style="@style/viewPlaceHolder" />
+
+            <TextView
+                android:id="@+id/tvGasFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="0.0003 ETH ≈ ￥0.53999" />
+        </LinearLayout>
+
+        <View style="@style/viewDivider"
+            android:layout_marginVertical="15dp"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.aries.ui.view.radius.RadiusRelativeLayout
+                android:id="@+id/layoutSpeedBest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="10dp"
+                app:rv_strokeSelectedColor="@color/blue_color"
+                app:rv_strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/tvSpeedBest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/fast_most"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvSpeedBestValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedBest"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp"
+                    tools:text="23.38Gwei" />
+
+                <TextView
+                    android:id="@+id/tvSpeedBestTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedBestValue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/half_m"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/ivSpeedBest"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_common_cb_sel"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+            <com.aries.ui.view.radius.RadiusRelativeLayout
+                android:id="@+id/layoutSpeedFast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="10dp"
+                app:rv_strokeSelectedColor="@color/blue_color"
+                app:rv_strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/tvSpeedFast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/fast"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvSpeedFastValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedFast"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp"
+                    tools:text="23.38Gwei" />
+
+                <TextView
+                    android:id="@+id/tvSpeedFastTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedFastValue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/five_m"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/ivSpeedFast"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_common_cb_sel"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+            <com.aries.ui.view.radius.RadiusRelativeLayout
+                android:id="@+id/layoutSpeedNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="10dp"
+                app:rv_strokeSelectedColor="@color/blue_color"
+                app:rv_strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/tvSpeedNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/normal"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvSpeedNormalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedNormal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="15sp"
+                    tools:text="23.38Gwei" />
+
+                <TextView
+                    android:id="@+id/tvSpeedNormalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSpeedNormalValue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/ten_m"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/ivSpeedNormal"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_common_cb_sel"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvGasFeeSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="9dp"
+                android:text="@string/custom"
+                android:textColor="@color/blue_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/ivGasFeeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:rotation="-90"
+                android:src="@drawable/ic_common_transfer_gas_detail" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGasSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.aries.ui.view.radius.RadiusLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="15dp"
+                android:paddingHorizontal="10dp"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="6dp">
+
+                <com.aries.ui.view.radius.RadiusEditText
+                    android:id="@+id/edGasPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Gas Price"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textColorHint="@color/color_editor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gwei"
+                    android:textColor="@color/white_color_assist_2"
+                    android:textSize="16sp" />
+
+            </com.aries.ui.view.radius.RadiusLinearLayout>
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/edGasLimit"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Gas Limit"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="6dp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/viewPlaceHolder"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvConfirm"
+            style="@style/submitButton.blue.disable"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="35dp"
+            android:enabled="false"
+            android:text="@string/sure"
+            android:textSize="14sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

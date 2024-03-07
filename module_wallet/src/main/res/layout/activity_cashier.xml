@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_color"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.CashierActivity">
+
+    <include layout="@layout/layout_cashier_share" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_color"
+        android:orientation="vertical"
+        tools:context=".mvp.ui.activity.CashierActivity">
+
+        <include layout="@layout/default_titlbar_trans" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical"
+            android:paddingVertical="20dp"
+            app:rv_backgroundColor="@color/white"
+            app:rv_radius="10dp">
+
+            <TextView
+                android:id="@+id/tvCashierTip"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#FFFFAB65"
+                android:textSize="14sp"
+                tools:text="@string/home_cashier_tips" />
+
+            <ImageView
+                android:id="@+id/ivQrcode"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_home_cashier_mask" />
+
+            <com.aries.ui.view.radius.RadiusLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="20dp"
+                android:gravity="center"
+                android:minHeight="100dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="15dp"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receive_address"
+                    android:textColor="@color/white_color_assist_2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="16sp"
+                    tools:text="0x271F8506Bd0cC946D815ce18C257bBC2fBB40A90" />
+
+            </com.aries.ui.view.radius.RadiusLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="54dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_home_cashier_share"
+                    android:drawablePadding="8dp"
+                    android:text="@string/share"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="16sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <TextView
+                    android:id="@+id/tvCopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_common_copy"
+                    android:drawablePadding="8dp"
+                    android:text="@string/copy"
+                    android:textColor="@color/text_color_dark_normal"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+        <View style="@style/viewPlaceHolder" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="23dp"
+            android:src="@drawable/ic_home_cashier_mask" />
+
+    </LinearLayout>
+</FrameLayout>

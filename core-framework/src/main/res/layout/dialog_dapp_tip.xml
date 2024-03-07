@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1"
+    tools:context="com.roo.core.ui.dialog.DappTipDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace"
+        android:layout_above="@+id/content" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="17dp"
+            android:text="@string/visit_instructions"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="23dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="28dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="8dp">
+
+            <ImageView
+                android:id="@+id/ivIconDapp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="12dp"
+                android:gravity="center"
+                android:text="@string/dapp_visiting_them"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAnnounce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawablePadding="11dp"
+                android:gravity="center"
+                android:text="@string/dapp_visit_tip"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+        <com.aries.ui.view.radius.RadiusCheckBox
+            android:visibility="gone"
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:drawablePadding="6dp"
+            android:text="@string/no_remind_later"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp"
+            app:rv_leftCheckedDrawable="@drawable/ic_common_cb_sel"
+            app:rv_leftDrawable="@drawable/ic_common_cb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="25dp">
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvExit"
+                style="@style/submitButton.blue"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/exit"
+                android:textSize="16sp"
+                app:rv_backgroundColor="#FF5F69E8" />
+
+            <View
+                style="@style/viewSpace"
+                android:layout_width="25dp" />
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvConfirm"
+                style="@style/submitButton.blue"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sure"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1"
+    tools:context="com.roo.home.mvp.ui.dialog.ScreenShotTipsDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace"
+        android:layout_above="@+id/content" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_home_screen_shot_warn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="12dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/prohibit_photo_screenshot"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:drawableStart="@drawable/shape_circle_7_black"
+            android:drawablePadding="11dp"
+            android:text="@string/warning_one"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/shape_circle_7_black"
+            android:drawablePadding="11dp"
+            android:text="@string/warning_two"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/shape_circle_7_black"
+            android:drawablePadding="11dp"
+            android:text="@string/warning_three"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/shape_circle_7_black"
+            android:drawablePadding="11dp"
+            android:text="@string/warning_four"
+            android:textColor="#FF666666"
+            android:textSize="14sp" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/btn_ensure"
+            style="@style/submitButton.blue"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="25dp"
+            android:text="@string/got_it"
+            android:textSize="14sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

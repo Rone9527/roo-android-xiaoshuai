@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.AssetSelectActivity">
+
+    <include
+        layout="@layout/default_titlbar"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_common_back_black" />
+
+        <com.aries.ui.view.radius.RadiusFrameLayout
+            android:id="@+id/layoutInput"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:hint="@string/hint_input_coin_contract"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp"
+                app:rv_leftDrawable="@drawable/ic_common_search" />
+
+        </com.aries.ui.view.radius.RadiusFrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMyAssets"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/my_assets"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <View style="@style/viewPlaceHolder" />
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvAssetsNumb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:rv_backgroundColor="@color/color_txt_red2"
+                app:rv_radius="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/ic_common_next" />
+        </LinearLayout>
+
+        <View
+            style="@style/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp" />
+
+        <LinearLayout
+            android:id="@+id/llAutoToken"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/auto_token"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <View style="@style/viewPlaceHolder" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:src="@drawable/ic_common_next" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_color_dark" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tvChooseLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/choose_chain"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvHotCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toEndOf="@+id/tvChooseLink"
+            android:text="@string/hot_assets"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <View
+            style="@style/viewDivider"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_link"
+            style="@style/ViewNoFade"
+            android:layout_width="75dp" />
+
+        <View
+            style="@style/viewDivider"
+            android:layout_width="1dp" />
+
+        <include layout="@layout/default_rv" />
+
+    </LinearLayout>
+</LinearLayout>

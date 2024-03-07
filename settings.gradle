@@ -1,0 +1,42 @@
+include ':app'
+
+include ':core-framework'
+include ':base-domain'
+
+include ':library:library_kline'
+include ':library:library_seekbar'
+include ':library:library_snackerbar'
+include ':library:library_router'
+include ':library:library_tablayout'
+include ':library:library_splash'
+include ':library:library_zxing'
+include ':library:library_view'
+include ':library:library_language'
+include ':library:library_lock'
+include ':library:library_verify_button'
+include ':library:library_shine'
+include ':library:library_mmkv'
+include ':library:library_stick_head'
+include ':library:library_webview'
+include ':library:library_forward'
+include ':library:library_keyboard'
+include ':library:library_update'
+include ':library:library_chart'
+include ':library:zxing-android-embedded'
+
+include ':module_wallet'
+include ':module_trade'
+include ':module_dapp'
+include ':module_mine'
+
+include ':module_upgrade'
+include ':module_web'
+include ':module_qrcode'
+
+
+include ':library:wallet_connect'
+include ':library:walletconnect'
+include ':zxing-android-embedded'
+
+
+

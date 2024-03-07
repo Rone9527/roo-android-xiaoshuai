@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="15dp">
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:text="@string/simple_CN"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="16sp" />
+
+    <View style="@style/viewPlaceHolder" />
+
+    <com.aries.ui.view.radius.RadiusCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:checked="false"
+        app:rv_leftCheckedDrawable="@drawable/ic_common_cb_sel"
+        app:rv_leftDrawable="@drawable/ic_common_cb" />
+
+
+</LinearLayout>

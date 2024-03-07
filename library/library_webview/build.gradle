@@ -1,0 +1,10 @@
+apply from: "../library.gradle"
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat_v7"]
+
+    implementation rootProject.ext.dependencies["okhttp3"]
+    implementation project(':base-domain')
+    api files('libs/tbs_sdk_thirdapp_v4.3.0.3_43903_sharewithdownloadwithfile_withoutGame_obfs_20200402_121309.jar')
+}

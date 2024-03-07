@@ -1,0 +1,15 @@
+apply from: "../componet.gradle"
+
+android {
+    defaultConfig {
+        if (project.ext.runAsApp) {
+            applicationId 'com.jiameng.qrcode'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library:library_zxing')
+    implementation project(':library:zxing-android-embedded')
+    implementation rootProject.ext.dependencies["easyphotos"]
+}

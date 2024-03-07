@@ -1,0 +1,39 @@
+apply from: "../componet.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    defaultConfig {
+        if (project.ext.runAsApp) {
+            applicationId 'com.roo.dapp'
+        }
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(':library:library_view')
+    implementation files('libs\\tron-client-1.0.0.jar')
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation project(':library:library_webview')
+    implementation rootProject.ext.dependencies["BRVAH"]
+    implementation rootProject.ext.dependencies["SmartRefresh"]
+    implementation project(':library:library_tablayout')
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
+
+    implementation 'org.web3j:core:4.6.0-android'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation project(path: ':library:walletconnect')
+    //https://github.com/trustwallet/wallet-core-
+    implementation "com.trustwallet:wallet-core:2.6.3"
+
+    api("com.google.guava:guava:29.0-android")
+    //比特币主链
+    implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+//    if (project.ext.runAsApp) {
+//        addComponent ':module_wallet'
+//    }
+}

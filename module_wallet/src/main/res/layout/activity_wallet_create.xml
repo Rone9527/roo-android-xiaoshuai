@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.WalletCreateActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_wallet_id"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="20sp" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/etWallName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/create_wallet_name_input_tips"
+                android:padding="20dp"
+                android:paddingHorizontal="10dp"
+                android:text="RooWallet_1"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/ic_common_input_close" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvModifyTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tip_txt_wallet_name"
+            android:textColor="@color/red_color"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvCreateWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="14dp"
+            android:text="@string/create"
+            android:textColor="@color/ksw_md_solid_disable"
+            android:textSize="16sp"
+            app:rv_backgroundColor="@color/blue_color"
+            app:rv_radius="8dp" />
+
+        <TextView
+            android:id="@+id/tvImportWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/import_wallet"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

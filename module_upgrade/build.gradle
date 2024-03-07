@@ -1,0 +1,16 @@
+apply from: "../componet.gradle"
+
+android {
+
+    defaultConfig {
+        if (project.ext.runAsApp) {
+            applicationId 'com.roo.upgrade'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library:library_update')
+
+    implementation rootProject.ext.dependencies["numberprogressbar"]
+}

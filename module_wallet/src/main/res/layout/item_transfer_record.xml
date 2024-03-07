@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/ivCoin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_fileName="ic_home_transfer_side_pendding.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_toEndOf="@+id/ivCoin"
+        android:ellipsize="middle"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        tools:text="hhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gt" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddress"
+        android:layout_alignStart="@+id/tvAddress"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp"
+        tools:text="09/04/2020 14:32:52" />
+
+    <TextView
+        android:id="@+id/tvCoinAsset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        tools:text="12.45678345" />
+
+</RelativeLayout>

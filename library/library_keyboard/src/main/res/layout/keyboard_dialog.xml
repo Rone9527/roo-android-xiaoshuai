@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="#88000000">
+
+    <View
+        android:id="@+id/keybordOutSide"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_radius_25"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/keybordClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_common_close" />
+
+            <TextView
+                android:id="@+id/keyBordTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                android:text="@string/keyboard_title_setting" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/keyBordTitleSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/keyboard_pwd_tip"
+                android:textColor="#FF666666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/keyBordTitleTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="@string/keyboard_pwd_forget_warn"
+                android:textColor="#FA6400"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.xyzlf.custom.keyboardlib.PasswordView
+            android:id="@+id/dialog_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="38dp"
+            android:layout_marginVertical="15dp"
+            android:inputType="numberPassword"
+            tools:background="#FFFFFF" />
+
+        <com.xyzlf.custom.keyboardlib.KeyboardGirdView
+            android:id="@+id/dialog_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0dp"
+            tools:layout_height="200dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

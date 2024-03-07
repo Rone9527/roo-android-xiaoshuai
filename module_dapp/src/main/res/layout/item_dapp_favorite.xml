@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.roo.view.swipe.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeMenuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    app:contentView="@+id/content"
+    app:leftMenuView="@+id/left"
+    app:rightMenuView="@+id/right">
+
+    <FrameLayout
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/ivDappDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="27dp"
+            android:src="@drawable/ic_dapp_favorite_edit_delete"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivDapp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ivDappDelete"
+            android:src="@mipmap/ic_launcher" />
+
+        <View
+            android:id="@+id/dot"
+            style="@style/viewPlaceHolder"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ivDapp" />
+
+        <TextView
+            android:id="@+id/tvDappName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dot"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toEndOf="@+id/dot"
+            android:ellipsize="middle"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text="Uniswap"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvDappInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dot"
+            android:layout_alignStart="@+id/tvDappName"
+            android:layout_toStartOf="@+id/ivDappDrag"
+            android:singleLine="true"
+            android:text="--"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/ivDappDrag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="24dp"
+            android:src="@drawable/ic_dapp_favorite_edit_drag"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/right"
+        android:layout_width="84dp"
+        android:layout_height="match_parent"
+        android:background="#FFFA4400">
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</com.roo.view.swipe.EasySwipeMenuLayout>

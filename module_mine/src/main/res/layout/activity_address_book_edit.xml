@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.AddressBookEditActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        tools:context=".mvp.ui.activity.AddressBookEditActivity">
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:id="@+id/layoutLink"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="15dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <ImageView
+                android:id="@+id/ivLink"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvLink"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                tools:text="ETH" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_common_next" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_info"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:paddingHorizontal="10dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/edAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:digits="@string/filter_letter_number"
+                android:hint="@string/hint_input_address"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/ivScan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_common_scan" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/edRemark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_input_name"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/edDesc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_input_remark_optional"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+    </LinearLayout>
+</LinearLayout>

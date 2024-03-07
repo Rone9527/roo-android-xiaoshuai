@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1"
+    tools:context=".ui.dialog.TransferConfirmDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace"
+        android:layout_above="@+id/content" />
+
+    <com.aries.ui.view.radius.RadiusRelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_topLeftRadius="25dp"
+        app:rv_topRightRadius="25dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="支付详情"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@drawable/ic_common_close"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvTransferCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="27dp"
+            android:includeFontPadding="false"
+            android:text="@string/transfer_amount"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPayAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTransferCountText"
+            android:layout_marginTop="30dp"
+            android:text="@string/send_address"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvCashierAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPayAddressText"
+            android:layout_marginTop="50dp"
+            android:text="@string/receive_address"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_marginHorizontal="10dp"
+            android:layout_toStartOf="@+id/tvTransferCountUnit"
+            android:id="@+id/tvTransferCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTransferCountText"
+            android:layout_marginBottom="-4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="25sp"
+            tools:text="12432" />
+
+        <TextView
+            android:id="@+id/tvTransferCountUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignBaseline="@+id/tvTransferCount"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text="TRX" />
+
+        <TextView
+            android:id="@+id/tvPayAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvPayAddressText"
+            android:layout_alignParentEnd="true"
+            android:lineSpacingMultiplier="1.3"
+            android:gravity="end"
+            android:maxWidth="220dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text=" " />
+
+        <TextView
+            android:id="@+id/tvCashierAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvCashierAddressText"
+            android:layout_alignParentEnd="true"
+            android:lineSpacingMultiplier="1.3"
+            android:gravity="end"
+            android:maxWidth="220dp"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            tools:text=" " />
+
+
+
+
+
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/btn_ensure"
+            style="@style/submitButton.blue"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tvCashierAddress"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/next"
+            android:textSize="14sp" />
+
+    </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+</RelativeLayout>

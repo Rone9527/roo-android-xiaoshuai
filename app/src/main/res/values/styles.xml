@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="AppWelcome" parent="AppTheme.FullScreen">
+        <item name="android:windowBackground">@color/background_color</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

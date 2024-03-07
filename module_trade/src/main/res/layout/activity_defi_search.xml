@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.DefiSearchActivity">
+
+    <include
+        layout="@layout/default_titlbar"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:paddingHorizontal="10dp"
+            android:src="@drawable/ic_common_back_black" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="6dp">
+
+            <com.aries.ui.view.radius.RadiusEditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/input_token_contract_address"
+                android:imeOptions="actionGo"
+                android:paddingHorizontal="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark_normal"
+                android:textColorHint="@color/color_editor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/ic_common_input_close"
+                android:visibility="invisible" />
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/default_rv_refresh_loadmore" />
+
+</LinearLayout>

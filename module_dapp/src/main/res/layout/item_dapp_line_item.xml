@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/ivDapp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <View
+        android:id="@+id/dot"
+        style="@style/viewPlaceHolder"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ivDapp" />
+
+    <TextView
+        android:id="@+id/tvDappName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dot"
+        android:layout_marginHorizontal="10dp"
+        android:layout_toEndOf="@+id/dot"
+        android:ellipsize="middle"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:text="Uniswap"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvDappInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dot"
+        android:layout_alignStart="@+id/tvDappName"
+        android:singleLine="true"
+        android:text="----"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp" />
+
+</RelativeLayout>

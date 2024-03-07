@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.WalletCreateNormalActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_wallet"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="20sp" />
+
+        <com.aries.ui.view.radius.RadiusRelativeLayout
+            android:id="@+id/layoutCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="26dp"
+            android:paddingVertical="34dp"
+            app:rv_backgroundColor="#F5F6F9"
+            app:rv_radius="8dp">
+
+            <ImageView
+                android:id="@+id/ivCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_home_wallet_normal_create" />
+
+            <TextView
+                android:id="@+id/tvCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_toEndOf="@+id/ivCreate"
+                android:text="@string/create_wallet"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCreate"
+                android:layout_alignStart="@+id/tvCreate"
+                android:text="@string/create_a_new_wallet"
+                android:textColor="@color/background_color_mask"
+                android:textSize="11sp" />
+
+        </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+        <com.aries.ui.view.radius.RadiusRelativeLayout
+            android:id="@+id/layoutImport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="26dp"
+            android:paddingVertical="34dp"
+            app:rv_backgroundColor="#F5F6F9"
+            app:rv_radius="8dp">
+
+            <ImageView
+                android:id="@+id/ivImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_home_wallet_normal_import" />
+
+            <TextView
+                android:id="@+id/tvImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_toEndOf="@+id/ivImport"
+                android:text="@string/import_wallet"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvImport"
+                android:layout_alignStart="@+id/tvImport"
+                android:text="@string/import_exist_wallet"
+                android:textColor="@color/background_color_mask"
+                android:textSize="11sp" />
+
+        </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+        <View style="@style/viewPlaceHolder" />
+
+    </LinearLayout>
+</LinearLayout>

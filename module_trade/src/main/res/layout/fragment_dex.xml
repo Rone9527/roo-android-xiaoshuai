@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.roo.trade.mvp.ui.fragment.QuotesFragment">
+
+
+    <com.aries.ui.view.radius.RadiusRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        app:rv_topLeftRadius="15dp"
+        app:rv_topRightRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp">
+
+            <com.aries.ui.view.radius.RadiusLinearLayout
+                android:id="@+id/layoutFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="17dp"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="11dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBalanceTo"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvBalanceFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="余额：0.00"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvChooseFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBalanceFrom"
+                        android:layout_marginBottom="20dp"
+                        android:drawableEnd="@drawable/ic_choose_dex_grey"
+                        android:drawablePadding="10dp"
+                        android:text="选择代币"
+                        android:textColor="@color/text_color_dark_normal"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutCoinFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBalanceFrom"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/ivCoinFrom"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            tools:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvCoinNameFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/ivCoinFrom"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-6dp"
+                            android:layout_toEndOf="@+id/ivCoinFrom"
+                            android:textColor="@color/text_color_dark_normal"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            tools:text="BTC" />
+
+                        <TextView
+                            android:id="@+id/tvLinkNameFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCoinNameFrom"
+                            android:layout_alignStart="@+id/tvCoinNameFrom"
+                            android:textColor="@color/white_color_assist_2"
+                            android:textSize="14sp"
+                            tools:text="BTC" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="18dp"
+                            android:tint="@color/white_color_assist_2"
+                            tools:src="@drawable/ic_choose_dex_grey" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="8dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTransferCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转出"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTransferCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTransferCountText"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/color_editor"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="3.2" />
+                </RelativeLayout>
+            </com.aries.ui.view.radius.RadiusLinearLayout>
+
+            <com.aries.ui.view.radius.RadiusLinearLayout
+                android:id="@+id/layoutTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutFrom"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="17dp"
+                app:rv_backgroundColor="@color/background_color_dark"
+                app:rv_radius="11dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBalanceTo"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvBalanceTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="余额：0.00"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvChooseTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBalanceTo"
+                        android:layout_marginBottom="20dp"
+                        android:drawableEnd="@drawable/ic_choose_dex_grey"
+                        android:drawablePadding="10dp"
+                        android:text="选择代币"
+                        android:textColor="@color/text_color_dark_normal"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutCoinTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBalanceTo"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/ivCoinTo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            tools:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvCoinNameTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/ivCoinTo"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-6dp"
+                            android:layout_toEndOf="@+id/ivCoinTo"
+                            android:textColor="@color/text_color_dark_normal"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            tools:text="BTC" />
+
+                        <TextView
+                            android:id="@+id/tvLinkNameTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCoinNameTo"
+                            android:layout_alignStart="@+id/tvCoinNameTo"
+                            android:textColor="@color/white_color_assist_2"
+                            android:textSize="14sp"
+                            tools:text="BTC" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/tvCoinNameTo"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="18dp"
+                            android:tint="@color/white_color_assist_2"
+                            tools:src="@drawable/ic_choose_dex_grey" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="8dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvReceiveCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接收(预估)"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvReceiveCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvReceiveCountText"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/color_editor"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="3.2" />
+
+                </RelativeLayout>
+
+            </com.aries.ui.view.radius.RadiusLinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_dex_side_circle" />
+
+        </RelativeLayout>
+
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvConfirm"
+            style="@style/submitButton.blue.disable"
+            android:layout_below="@+id/layoutTransfer"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="15dp"
+            android:enabled="false"
+            android:text="确定兑换" />
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:id="@+id/layoutTransConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvConfirm"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_radius="11dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兑换路径"
+                    android:textColor="#FFA8B0BC"
+                    android:textSize="14sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp"
+                    tools:text="MDEX" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    tools:src="@mipmap/ic_launcher" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="参考价格"
+                    android:textColor="#FFA8B0BC"
+                    android:textSize="14sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp"
+                    tools:text="1 BTC＝33300.897321 USDT" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手续费"
+                    android:textColor="#FFA8B0BC"
+                    android:textSize="14sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp"
+                    tools:text="1%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="滑点限制"
+                    android:textColor="#FFA8B0BC"
+                    android:textSize="14sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.aries.ui.view.radius.RadiusTextView
+                        android:id="@+id/tvTag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="2dp"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="#FFE7E7E7"
+                        app:rv_backgroundSelectedColor="@color/blue_color_tiny"
+                        app:rv_radius="10dp"
+                        app:rv_selected="false"
+                        app:rv_textColor="@color/text_color_dark_normal"
+                        app:rv_textSelectedColor="@color/blue_color"
+                        tools:text="1%" />
+
+                    <com.aries.ui.view.radius.RadiusTextView
+                        android:id="@+id/tvTag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="2dp"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="#FFE7E7E7"
+                        app:rv_backgroundSelectedColor="@color/blue_color_tiny"
+                        app:rv_radius="10dp"
+                        app:rv_selected="false"
+                        app:rv_textColor="@color/text_color_dark_normal"
+                        app:rv_textSelectedColor="@color/blue_color"
+                        tools:text="2%" />
+
+                    <com.aries.ui.view.radius.RadiusTextView
+                        android:id="@+id/tvTag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="2dp"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        app:rv_backgroundColor="#FFE7E7E7"
+                        app:rv_backgroundSelectedColor="@color/blue_color_tiny"
+                        app:rv_radius="10dp"
+                        app:rv_selected="false"
+                        app:rv_textColor="@color/text_color_dark_normal"
+                        app:rv_textSelectedColor="@color/blue_color"
+                        tools:text="3%" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最小接收数量"
+                    android:textColor="#FFA8B0BC"
+                    android:textSize="14sp" />
+
+                <View style="@style/viewPlaceHolder" />
+
+                <TextView
+                    android:id="@+id/tvMinReceiveCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF333333"
+                    android:textSize="14sp"
+                    tools:text="23990.902123 USDT" />
+            </LinearLayout>
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:id="@+id/layoutRecent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="18dp"
+            android:paddingBottom="18dp"
+            app:rv_backgroundColor="@color/background_color_dark"
+            app:rv_topLeftRadius="25dp"
+            app:rv_topRightRadius="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/shape_blue_dex" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCoinFromRecent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        tools:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tvCoinNameFromRecent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/ivCoinFromRecent"
+                        android:textColor="@color/text_color_dark_normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="BTC" />
+
+                    <TextView
+                        android:id="@+id/tvLinkNameFromRecent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivCoinFromRecent"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp"
+                        tools:text="0.234423" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="成功"
+                        android:textColor="#FF108EFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_dex_side" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCoinToRecent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toStartOf="@+id/tvCoinNameToRecent"
+                        tools:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tvCoinNameToRecent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/text_color_dark_normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="HT" />
+
+                    <TextView
+                        android:id="@+id/tvLinkNameToRecent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivCoinToRecent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white_color_assist_2"
+                        android:textSize="14sp"
+                        tools:text="0.2323" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+</LinearLayout>

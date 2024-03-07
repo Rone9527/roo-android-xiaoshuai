@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.BackupWordsActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="17dp">
+
+            <TextView
+                android:id="@+id/tvHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="42dp"
+                android:gravity="center"
+                android:text="@string/tip_phrase_save"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+
+            <include
+                layout="@layout/default_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHint"
+                android:layout_marginTop="42dp"
+                tools:layout_height="224dp" />
+
+            <TextView
+                android:id="@+id/tvCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="15dp"
+                android:text="@string/copy_phrase"
+                android:textColor="@color/blue_color"
+                android:textSize="14sp" />
+
+            <com.aries.ui.view.radius.RadiusTextView
+                android:id="@+id/tvConfirmBackUp"
+                style="@style/submitButton.blue"
+                android:layout_below="@+id/tvCopy"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginTop="56dp"
+                android:text="@string/sure_back_up_already" />
+
+            <TextView
+                android:id="@+id/tvConfirmBackUpWait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvConfirmBackUp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/back_up_later"
+                android:textColor="@color/blue_color" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

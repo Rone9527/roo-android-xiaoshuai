@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="140">
+
+            <TextView
+                android:id="@+id/tvIndex"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="11sp"
+                tools:text="99" />
+
+            <TextView
+                android:id="@+id/tvCoinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvIndex"
+                android:gravity="end"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                tools:text="BTC" />
+
+            <TextView
+                android:id="@+id/tvVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCoinName"
+                android:layout_alignStart="@+id/tvCoinName"
+                android:gravity="end"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="12sp"
+                tools:text="$85622456.55" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="120"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="16sp"
+                tools:text="955332.22" />
+
+            <TextView
+                android:id="@+id/tvPriceLegal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_color_assist_2"
+                android:textSize="12sp"
+                tools:text="¥1.26" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="95"
+            android:gravity="end">
+
+            <CheckBox
+                android:id="@+id/cbPercent"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingVertical="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                tools:background="@drawable/shape_red"
+                tools:text="-12.2%" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp" />
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/ivNotice"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginVertical="25dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvCoinDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/ivNotice"
+        android:ellipsize="middle"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp"
+        tools:text="273823.31 FNC 收款成功" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCoinDesc"
+        android:layout_alignStart="@+id/tvCoinDesc"
+        android:layout_toEndOf="@+id/ivNotice"
+        android:ellipsize="middle"
+        android:maxWidth="266dp"
+        android:singleLine="true"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp"
+        tools:text="接收地址 hhfb2kvf2s4673gthhfb2kvf2s4673gthhfb2kvf2s4673gt" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAddress"
+        android:layout_alignStart="@+id/tvAddress"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="11sp"
+        tools:text="09/04/2020 14:32:52" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_common_next" />
+
+</RelativeLayout>

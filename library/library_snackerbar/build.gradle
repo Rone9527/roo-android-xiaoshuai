@@ -1,0 +1,7 @@
+apply from: "../library.gradle"
+
+dependencies {
+    implementation rootProject.ext.dependencies["appcompat_v7"]
+    implementation rootProject.ext.dependencies["design"]
+}
+

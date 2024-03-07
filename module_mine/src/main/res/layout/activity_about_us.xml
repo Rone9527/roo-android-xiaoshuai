@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/default_titlbar" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="23dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="RooWallet"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llVersion"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="@string/version_name"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivRoundOrange"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/shape_round_deep_orange" />
+
+        <TextView
+            android:id="@+id/tvVersionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v 0.1.0"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="14sp" />
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llUserAgreement"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="@string/user_agreement"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_common_next" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llPrivacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_common_next" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <View
+        style="@style/viewSpace"
+        android:layout_height="15dp" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="@string/website"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llTelegram"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="Telegram"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTelegram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llGithub"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="Github"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGithub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/llTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/background_color_dark"
+        app:rv_radius="6dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="Twitter"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+</LinearLayout>

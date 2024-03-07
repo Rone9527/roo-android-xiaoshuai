@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- transparent-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_1f">#1F000000</color>
+    <color name="transparent_33">#33000000</color>
+    <color name="transparent_44">#44000000</color>
+    <color name="transparent_88">#BF000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <color name="colorAccent">#FF376AFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
+
+    <color name="blue_color_tiny">#22376AFF</color>
+    <color name="blue_color">#FF376AFF</color>
+    <color name="yellow_color">#FFFFC382</color>
+    <color name="red_color">#FFEF5656</color>
+    <color name="green_color">#FF00B464</color>
+
+    <color name="divide_color">#FFF5F6F9</color>
+
+    <!--UI给的颜色-->
+    <color name="white_color_main">#FFDEE2F0</color>
+    <color name="color_editor">#FFC4C9D8</color>
+    <color name="white_color_assist_2">#FFA8B0BC</color>
+    <color name="white_color_assist_3">#99FFFFFF</color>
+    <color name="white_color_assist_1">#FF999999</color>
+    <color name="white_color_assist_5">#FF666666</color>
+    <color name="white_color_assist_4">#4DC4C9D8</color>
+    <color name="white_color_assist_6">#FF555555</color>
+    <color name="text_color_dark_normal">#FF333333</color>
+
+    <color name="background_color_mask">#FF999999</color>
+    <color name="background_color">#FFFFFFFF</color>
+    <color name="background_color_dark">#FFF5F6F9</color>
+    <color name="color_deep_orange">#FFFA6400</color>
+    <color name="color_txt_red2">#FFFA4400</color>
+</resources>

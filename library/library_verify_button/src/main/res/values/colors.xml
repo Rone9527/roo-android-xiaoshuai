@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_verify_resend">#FF7A84A4</color>
+    <color name="color_verify_send">#3D7DF7</color>
+
+</resources>

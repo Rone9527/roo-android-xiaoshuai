@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/white_color_assist_1"
+    tools:context=".mvp.ui.dialog.ChooseDexDialog">
+
+    <View
+        android:id="@+id/touchOutside"
+        style="@style/viewSpace" />
+
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="44dp"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/background_color"
+        app:rv_radius="8dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/exchange_way"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:text="@string/exchange_platform_name"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:text="10.345332"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/change"
+                android:textColor="@color/text_color_dark_normal"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/default_rv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+
+</RelativeLayout>

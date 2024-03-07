@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.BackupWordsActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_home_transfer_detail_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="200dp"
+            android:gravity="center"
+            android:text="@string/create_success"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/create_wallet_tip"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvConfirmBackUp"
+            style="@style/submitButton.blue"
+            android:layout_marginTop="60dp"
+            android:text="@string/back_up_now" />
+
+        <TextView
+            android:id="@+id/tvConfirmBackUpWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="23dp"
+            android:text="@string/back_up_next_time"
+            android:textColor="@color/blue_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

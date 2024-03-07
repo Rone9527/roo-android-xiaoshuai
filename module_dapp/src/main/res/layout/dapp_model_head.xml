@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingHorizontal="15dp">
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="10dp"
+            android:text="@string/favorites"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp"
+            app:rv_selected="true"
+            app:rv_textColor="@color/text_color_dark_normal"
+            app:rv_textSelectedColor="@color/blue_color" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/tvRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvFavorite"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="35dp"
+            android:layout_toEndOf="@+id/tvFavorite"
+            android:paddingVertical="10dp"
+            android:text="@string/recent"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="14sp"
+            app:rv_selected="false"
+            app:rv_textColor="@color/text_color_dark_normal"
+            app:rv_textSelectedColor="@color/blue_color" />
+
+        <TextView
+            android:id="@+id/tvRecentAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvFavorite"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/ic_common_next"
+            android:drawablePadding="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/white_color_assist_1"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:text="全部 10"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_fav_recent"
+        style="@style/ViewNoFade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        tools:layout_height="100dp"
+        tools:listitem="@layout/item_dapp_grid_item" />
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="7dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="@string/string_hot"
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_hot"
+        style="@style/ViewNoFade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        tools:layout_height="180dp"
+        tools:listitem="@layout/item_dapp_grid_item" />
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="7dp" />
+
+
+</LinearLayout>

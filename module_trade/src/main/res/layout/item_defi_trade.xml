@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="9dp"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvType"
+        android:layout_marginTop="3dp"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvAmountToken0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvType"
+        android:layout_marginLeft="120dp"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvToken0"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmountToken0"
+        android:layout_alignLeft="@+id/tvAmountToken0"
+        android:layout_alignTop="@+id/tvDate"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="94dp"
+        android:src="@drawable/ic_defi_add_liquid"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvAmountToken1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvType"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvToken1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmountToken1"
+        android:layout_alignTop="@+id/tvDate"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@color/text_color_dark_normal"
+        android:textSize="14sp" />
+</RelativeLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.roo.mine.mvp.ui.activity.SettingActivity">
+
+    <include layout="@layout/default_titlbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/background_color_dark"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="@string/safe_setting"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutSafePwdModify"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_safe_psw"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutVerifySafePwd"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_by_safe_psw"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <com.roo.view.SwitchButton
+            android:id="@+id/swVerifySafePwd"
+            style="@style/SwitchButtonMD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:checked="false" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutVerifyFinger"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_by_finger_face"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <com.roo.view.SwitchButton
+            android:id="@+id/swVerifyFinger"
+            style="@style/SwitchButtonMD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:checked="false" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/background_color_dark"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="@string/notify_setting"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_push_manager"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <com.roo.view.SwitchButton
+            android:id="@+id/swPushManager"
+            style="@style/SwitchButtonMD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:checked="false" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/background_color_dark"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="@string/show_setting"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/layoutLegalCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/denomination_currency"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <TextView
+            android:id="@+id/tvLegalCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="7dp"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            tools:text="CNY" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:textColor="@color/text_color_dark_normal"
+            android:textSize="16sp" />
+
+        <View style="@style/viewPlaceHolder" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="7dp"
+            android:textColor="@color/white_color_assist_2"
+            android:textSize="16sp"
+            tools:text="@string/simple_CN" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_common_next" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/viewDivider"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

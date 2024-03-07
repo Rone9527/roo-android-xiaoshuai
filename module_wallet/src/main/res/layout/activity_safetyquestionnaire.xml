@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/default_titlbar" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        -->
+<!--    </LinearLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                tools:listitem="@layout/item_qa_adapter" />
+
+            <LinearLayout
+                android:id="@+id/ll_des"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+               >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="58dp"
+                    android:src="@drawable/ic_questionnaire">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="42dp"
+                    android:layout_marginTop="46dp"
+                    android:text="@string/safety_questionnaire_des"
+                    android:textColor="@color/text_color_dark_normal" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tv_submit"
+        style="@style/submitButton.blue.disable"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="49dp"
+        android:text="@string/start_testing"
+        android:textSize="14sp" />
+</LinearLayout>

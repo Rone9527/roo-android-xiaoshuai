@@ -1,0 +1,104 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    debugImplementation rootProject.ext.dependencies["canary_debug"]
+    releaseImplementation rootProject.ext.dependencies["canary_release"]
+
+    implementation rootProject.ext.dependencies["easyphotos"]
+
+    implementation rootProject.ext.dependencies["multidex"]
+
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //rxbinding
+    api rootProject.ext.dependencies["rxbinding2"]
+    api rootProject.ext.dependencies["rxbinding2_appcompat_v7"]
+    api rootProject.ext.dependencies["rxbinding2_recyclerview_v7"]
+    api rootProject.ext.dependencies["rxbinding2_support_v4"]
+    api 'com.sunchen:netstatusbus:0.1.5'
+    api rootProject.ext.dependencies["progressmanager"]
+    api rootProject.ext.dependencies["retrofit_url_manager"]
+
+    api(rootProject.ext.dependencies["appcompat_v7"])
+    api(rootProject.ext.dependencies["support_v4"])
+
+    implementation(rootProject.ext.dependencies["design"])
+
+    //图片
+    api rootProject.ext.dependencies["imageloader"]
+    api rootProject.ext.dependencies["androideventbus"]
+    api rootProject.ext.dependencies["autosize"]
+
+    api 'io.github.inflationx:calligraphy3:3.1.1'
+    api 'io.github.inflationx:viewpump:1.0.0'
+
+    api project(':base-domain')
+    api project(':library:library_language')
+    api project(':library:library_forward')
+    api project(':library:library_snackerbar')
+    api project(':library:library_router')
+    api project(':library:library_mmkv')
+    api project(':library:library_keyboard')
+    implementation project(':library:library_tablayout')
+
+    api rootProject.ext.dependencies["immersionbar"]
+    api rootProject.ext.dependencies["uiwidget"]
+    api rootProject.ext.dependencies["avi_loading"]
+    api rootProject.ext.dependencies["BasePopup"]
+    api rootProject.ext.dependencies["toastcompat"]
+
+    implementation rootProject.ext.dependencies["BRVAH"]
+    implementation rootProject.ext.dependencies["SmartRefresh"]
+
+    api rootProject.ext.dependencies["lifecyclemodel"]
+    api rootProject.ext.dependencies["crashreport"]
+    api rootProject.ext.dependencies["arms"]
+    api rootProject.ext.dependencies["cc"]
+    api rootProject.ext.dependencies["fastjson"]
+    api rootProject.ext.dependencies["easythread"]
+    api rootProject.ext.dependencies["pager_bottom_tab_strip"]
+
+    api 'com.qiniu:happy-dns:0.2.13'
+
+    implementation rootProject.ext.dependencies["lottie"]
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.facebook.stetho:stetho-urlconnection:1.5.1'
+
+    //比特币主链
+    implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+    //以太坊主链：web3j
+    implementation 'org.web3j:core:4.6.0-android'
+    //加密-用于生成助记词
+    implementation 'io.github.novacrypto:BIP39:0.1.9'
+    implementation 'io.github.novacrypto:BIP44:0.0.3'
+    //创建keypair
+    implementation 'com.lhalcyon:bip32:1.0.0'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
+    //https://github.com/trustwallet/wallet-core-
+    implementation "com.trustwallet:wallet-core:2.6.3"
+}

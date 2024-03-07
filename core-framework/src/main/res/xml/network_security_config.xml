@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--https://juejin.im/post/5dc37e596fb9a04a80355b04-->
+    <!--允许有多个 domain-confing 该domain-config 下的domain 域名允许明文传输-->
+    <domain-config cleartextTrafficPermitted="true">
+        <!--includeSubdomains 是否是包含子域名-->
+        <domain includeSubdomains="true">android.bugly.qq.com</domain>
+    </domain-config>
+    <!--除了domain-config 的标签下的域名都不允许明文传输-->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

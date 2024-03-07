@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="@string/history_search"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="16sp" />
+
+    <View style="@style/viewPlaceHolder" />
+
+    <ImageView
+        android:id="@+id/ivDeleteAll"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:tint="@color/blue_color"
+        android:padding="10dp"
+        android:src="@drawable/ic_common_delete" />
+
+</LinearLayout>

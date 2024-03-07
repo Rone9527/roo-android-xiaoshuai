@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    tools:layout_width="75dp">
+
+    <FrameLayout
+        android:id="@+id/layoutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/ivCoin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@mipmap/ic_launcher" />
+
+
+    </FrameLayout>
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/tvCoinName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white_color_assist_2"
+        android:textSize="14sp"
+        app:rv_textSelectedColor="@color/text_color_dark_normal"
+        tools:text="USDT" />
+
+    <ImageView
+        android:id="@+id/ivIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_asset_select_asslet_link"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>
